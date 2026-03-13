@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>你的姓名 | 个人主页</title>
+  <meta name="description" content="这是一个适合科研工作者使用的 GitHub 个人主页模板。" />
+  <style>
+    :root {
+      --bg: #f7f9fc;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --primary: #1d4ed8;
+      --border: #e5e7eb;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+      --max-width: 980px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #eff6ff, #ffffff);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 56px 24px 40px;
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .avatar {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      box-shadow: var(--shadow);
+      background: #dbeafe;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 2rem;
+    }
+
+    .subtitle {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .intro {
+      margin: 0;
+      max-width: 760px;
+    }
+
+    .links {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: white;
+      box-shadow: var(--shadow);
+      font-size: 0.95rem;
+    }
+
+    .section {
+      margin: 28px 0;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 26px;
+    }
+
+    .section h2 {
+      margin-top: 0;
+      margin-bottom: 14px;
+      font-size: 1.35rem;
+      border-left: 4px solid var(--primary);
+      padding-left: 10px;
+    }
+
+    .news-item,
+    .pub-item,
+    .project-item,
+    .service-item {
+      padding: 12px 0;
+      border-bottom: 1px dashed var(--border);
+    }
+
+    .news-item:last-child,
+    .pub-item:last-child,
+    .project-item:last-child,
+    .service-item:last-child {
+      border-bottom: none;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 24px;
+      font-size: 0.92rem;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 4px 10px;
+      margin: 4px 8px 0 0;
+      border-radius: 999px;
+      background: #eef2ff;
+      color: #3730a3;
+      font-size: 0.88rem;
+    }
+
+    @media (max-width: 760px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .avatar {
+        margin: 0 auto;
+      }
+
+      .links {
+        justify-content: center;
+      }
+
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!--
+    使用说明（适合不懂代码的老师/科研人员）
+    1. 这一页的文字，直接改成你自己的内容即可。
+    2. 你只需要改“这里改成你的内容”附近的文字。
+    3. 如果某一部分不需要，直接整段复制删除即可。
+    4. 照片替换方法：把 avatar.jpg 换成你的照片文件名。
+    5. 发布方式：把这个文件命名为 index.html，上传到 GitHub Pages 仓库即可。
+  -->
+
+  <header class="hero">
+    <div class="hero-inner">
+      <!-- 这里改成你的照片文件名，例如 photo.jpg -->
+      <img src="avatar.jpg" alt="个人照片" class="avatar" />
+
+      <div>
+        <!-- 这里改成你的姓名 -->
+        <h1>你的姓名</h1>
+
+        <!-- 这里改成你的职务/单位 -->
+        <p class="subtitle">教授 / 副教授 / 博士后｜某某大学某某学院</p>
+
+        <!-- 这里改成你的简介 -->
+        <p class="intro">
+          我主要从事这里改成你的研究方向相关的科研工作，例如人工智能、数据科学、离散数学、教育技术等。
+          欢迎对相关研究、合作交流、研究生招生与课程建设感兴趣的老师和同学与我联系。
+        </p>
+
+        <div class="links">
+          <!-- 下面这些链接改成你自己的 -->
+          <a class="button" href="mailto:yourname@example.com">邮箱</a>
+          <a class="button" href="https://scholar.google.com/" target="_blank">Google Scholar</a>
+          <a class="button" href="https://github.com/yourname" target="_blank">GitHub</a>
+          <a class="button" href="https://www.cnki.net/" target="_blank">学术成果</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <h2>研究方向</h2>
+      <span class="tag">研究方向 1</span>
+      <span class="tag">研究方向 2</span>
+      <span class="tag">研究方向 3</span>
+      <span class="tag">研究方向 4</span>
+    </section>
+
+    <section class="section">
+      <h2>个人简介</h2>
+      <p>
+        这里写较完整的个人简介。例如：我于某年在某大学获得博士学位，现任职于某某大学某某学院。
+        近年来主持或参与国家自然科学基金、重点研发计划、教育教学改革项目等若干项，
+        在相关领域发表论文若干篇，研究兴趣包括这里改成你的方向。
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>最新动态</h2>
+      <div class="news-item">
+        <strong>【2026.03】</strong> 这里填写你的最新消息，例如论文录用、项目立项、会议报告等。
+      </div>
+      <div class="news-item">
+        <strong>【2026.01】</strong> 这里填写第二条动态。
+      </div>
+      <div class="news-item">
+        <strong>【2025.10】</strong> 这里填写第三条动态。
+      </div>
+    </section>
+
+    <div class="grid-2">
+      <section class="section">
+        <h2>代表论文</h2>
+        <div class="pub-item">
+          <strong>论文标题 1</strong><br />
+          <span class="meta">作者，期刊/会议，年份</span><br />
+          <a href="#">论文链接</a>
+        </div>
+        <div class="pub-item">
+          <strong>论文标题 2</strong><br />
+          <span class="meta">作者，期刊/会议，年份</span><br />
+          <a href="#">论文链接</a>
+        </div>
+        <div class="pub-item">
+          <strong>论文标题 3</strong><br />
+          <span class="meta">作者，期刊/会议，年份</span><br />
+          <a href="#">论文链接</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>项目与教学</h2>
+        <div class="project-item">
+          <strong>项目名称 1</strong><br />
+          <span class="meta">主持/参与，项目类别，起止时间</span>
+        </div>
+        <div class="project-item">
+          <strong>课程名称 1</strong><br />
+          <span class="meta">本科生/研究生课程</span>
+        </div>
+        <div class="project-item">
+          <strong>课程名称 2</strong><br />
+          <span class="meta">本科生/研究生课程</span>
+        </div>
+      </section>
+    </div>
+
+    <section class="section">
+      <h2>学术服务</h2>
+      <div class="service-item">期刊审稿：这里填写</div>
+      <div class="service-item">会议程序委员会/审稿：这里填写</div>
+      <div class="service-item">学会或专业委员会：这里填写</div>
+    </section>
+
+    <section class="section">
+      <h2>招生与合作</h2>
+      <p>
+        欢迎对这里改成你的研究方向感兴趣的本科生、硕士生和博士生联系我。
+        来信时建议附上个人简历、成绩单、研究兴趣说明等材料。
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>联系方式</h2>
+      <p>
+        地址：这里填写你的单位地址<br />
+        邮箱：<a href="mailto:yourname@example.com">yourname@example.com</a><br />
+        GitHub：<a href="https://github.com/yourname" target="_blank">https://github.com/yourname</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © 2026 你的姓名｜本页面由 GitHub Pages 托管
+  </footer>
+</body>
+</html>
